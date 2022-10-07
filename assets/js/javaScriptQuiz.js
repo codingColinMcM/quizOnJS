@@ -1,11 +1,28 @@
-document.getElementById("start").addEventListener("click", goToQuestions);
+document.getElementById("start").addEventListener("click", hide);
+document.getElementById("reveal").addEventListener("click", reveal);
 document.getElementById("mistake").addEventListener("click", mistake);
+
+var hidden = document.getElementById("hide-this")
 
 var madeMistake = false;
 
-function goToQuestions() {
+function hide() {
 
-    
+    if (hidden.style.display === "none") {
+        hidden.style.display = "block";
+      } else {
+        hidden.style.display = "none";
+      }
+
+}
+
+function reveal() {
+
+    if (hidden.style.display === "none") {
+        hidden.style.display = "block";
+      } else {
+        hidden.style.display = "none";
+      }
 
 }
 
