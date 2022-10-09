@@ -1,3 +1,7 @@
+var questionTitle = document.getElementById("question-title");
+var questionSection= document.getElementById("questions");
+var startButton = document.getElementById("start"); 
+
 var questions = {
 
     "Commonly used data types in JavaScript include all of the following EXCEPT: ":
@@ -19,7 +23,25 @@ var questions = {
 }
 
 function displayQuestions() {
-    for (const property in questions) {
-        console.log(`${property}: ${questions[property]}`);
-      }
+
+    for (var question in questions) {
+
+        questionTitle.innerHTML=question;
+
+        for (var choice in questions[question]) {
+
+            var questionChoice = document.createElement("button");
+            questionChoice.innerHTML = choice;
+            questionChoice.className = "question-choice";
+            var choiceDiv = document.getElementById("choices");
+            choiceDiv.appendChild(questionChoice);
+            var addBr = document.createElement("br");
+            choiceDiv.appendChild(addBr);
+
+        }
+
+    }
+        
 }
+
+startButton.addEventListener("click", displayQuestions);
