@@ -35,7 +35,7 @@ function mistake() {
 }
 
 function timer(){
-    var sec = 4;
+    var sec = 91;
 
     // Using the setInterval() function to display the number of seconds left in the 
     // quiz
