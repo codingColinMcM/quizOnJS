@@ -13,7 +13,7 @@ var i = 0;
 var numCorrect = 0;
 var percentScore = 0;
 
-var sec = 4;
+var sec = 91;
 function timer(){
     
     setInterval(function(){
